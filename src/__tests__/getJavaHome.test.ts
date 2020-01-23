@@ -16,6 +16,9 @@ describe("getJavaHome", () => {
     const javaHomeConfig = "/path/to/java";
     const javaHome = await getJavaHome(javaHomeConfig);
     expect(javaHome).toBe(javaHomeConfig);
+    console.log(
+      "::error file={src/__tests__/getJavaHome.test.ts},line={19},col={6}::{This is a test message}"
+    );
   });
 
   it("reads from JAVA_HOME", async () => {
