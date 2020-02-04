@@ -13,10 +13,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 10
-
-      - name: Install Yarn
-        run: curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+          node-version: "10.x"
 
       - name: Setup git env
         run: |
@@ -30,7 +27,7 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn install
 
       - name: Set new version
