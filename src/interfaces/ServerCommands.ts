@@ -53,6 +53,10 @@ export const ServerCommands = {
    * worksheet.
    */
   NewScalaFile: "new-scala-file",
+  /**
+   * Create a worksheet with a default name in current directory
+   */
+  NewScalaWorksheet: "new-scala-worksheet",
   /** Creaet a new Scala project using one of the available g8 templates. */
   NewScalaProject: "new-scala-project",
   /** Reset a decision you made about a specific setting. */
