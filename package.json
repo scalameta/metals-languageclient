@@ -32,7 +32,7 @@
     "fp-ts": "^2.4.1",
     "locate-java-home": "^1.1.2",
     "mkdirp": "^1.0.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.0.0",
     "promisify-child-process": "^4.0.0",
     "semver": "^7.1.1",
     "shell-quote": "^1.7.2",
