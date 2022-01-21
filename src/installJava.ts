@@ -95,7 +95,7 @@ function download({
 }): Promise<string> {
   return fetch(url)
     .then((response) => {
-      if (!response.ok) {
+      if (!response.ok || response.body == null) {
         throw new Error(`Error while downloading Java from ${url}`);
       }
       return promisify(pipeline)(
