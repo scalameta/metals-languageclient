@@ -16,9 +16,10 @@ export function fetchMetals({
     (p) => !p.startsWith("-agentlib")
   );
 
+  const binaryVersion = serverVersion > "0.11.2" ? "2.13" : "2.12";
   const serverDependency = serverVersion.includes(":")
     ? serverVersion
-    : `org.scalameta:metals_2.12:${serverVersion}`;
+    : `org.scalameta:metals_${binaryVersion}:${serverVersion}`;
 
   return spawn(
     javaPath,
