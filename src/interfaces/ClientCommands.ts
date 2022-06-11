@@ -19,6 +19,10 @@ export const ClientCommands = {
    * Move the cursor focus to the provided location.
    */
   GotoLocation: "metals-goto-location",
+  /**
+   * Notify the client that the library filesystem is ready for navigation
+   */
+  LibraryFilesystemReady: "metals-library-filesystem-ready",
   /** Open a specific folder either in the same or new window */
   OpenFolder: "metals-open-folder",
   /**

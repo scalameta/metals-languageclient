@@ -68,6 +68,12 @@ export const ServerCommands = {
   DecodeFile: "file-decode",
   /** Retrieve a list of all build targets */
   ListBuildTargets: "list-build-targets",
+  /** Retrieve file system information on the uri passed e.g. isFile, isDirectory */
+  FileSystemStat: "filesystem-stat",
+  /** Retrieve file directory contents */
+  FileSystemReadDirectory: "filesystem-read-directory",
+  /** Retrieve file contents */
+  FileSystemReadFile: "filesystem-read-file",
   /**
    * Detect the build tool for a workspace and generate the bsp config for the
    * build tool. If there are multiple build tools for a workspace ,the user
