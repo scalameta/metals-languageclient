@@ -39,6 +39,14 @@ function fromConfig(
     typeof configuredJavaHome === "string" &&
     configuredJavaHome.trim() !== ""
   ) {
+    if (fs.existsSync(configuredJavaHome)) {
+      const stat = fs.lstatSync(configuredJavaHome);
+      const realpath = fs.realpathSync(configuredJavaHome);
+      if (stat.isSymbolicLink() && realpath.endsWith(`bin${path.sep}java`)) {
+        const javaHome = path.dirname(path.dirname(realpath));
+        return TE.right(javaHome);
+      }
+    }
     return TE.right(configuredJavaHome);
   } else {
     return TE.left({});

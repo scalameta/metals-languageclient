@@ -20,6 +20,14 @@ describe("getJavaHome", () => {
     expect(javaHome).toBe(javaHomeConfig);
   });
 
+  it("infers-from-symlink", async () => {
+    if (process.platform == "linux") {
+      const javaHomeConfig = "/usr/bin/java";
+      const javaHome = await getJavaHome(javaHomeConfig);
+      expect(javaHome).not.toBe(javaHomeConfig);
+    }
+  });
+
   it("reads from JAVA_HOME", async () => {
     const JAVA_HOME = "/path/to/java";
     process.env = { ...originalEnv, JAVA_HOME };
