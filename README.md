@@ -1,3 +1,9 @@
+> ### ⚠️ Deprecated
+>
+> This repo has now moved into https://github.com/scalameta/metals-vscode
+
+---
+
 # metals-languageclient
 Language client library for Node.js Metals clients
 
